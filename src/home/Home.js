@@ -11,6 +11,13 @@ import InstagramFeed from './InstagramFeed'
   cmsSlot: {
     '& .hero-image': {
       width: '100%'
+    },
+    '& .button': {
+      padding: '10px 20px',
+      border: '1px solid black',
+      margin: '10px 0',
+      textTransform: 'uppercase',
+      textAlign: 'center'
     }
   }
 }))
@@ -27,7 +34,9 @@ export default class Home extends Component {
         </Row>
         <Row>
           <Typography variant="subtitle1">
-            <CmsSlot className={classes.cmsSlot}>{app.cmsSlot}</CmsSlot>
+            <CmsSlot className={classes.cmsSlot} lazyLoadImages>
+              {app.cmsSlot}
+            </CmsSlot>
           </Typography>
         </Row>
         <Row>
