@@ -11,6 +11,13 @@ import InstagramFeed from './InstagramFeed'
   cmsSlot: {
     '& .hero-image': {
       width: '100%'
+    },
+    '& .button': {
+      padding: '10px 20px',
+      border: '1px solid black',
+      margin: '10px 0',
+      textTransform: 'uppercase',
+      textAlign: 'center'
     }
   }
 }))
