@@ -6,6 +6,7 @@ import Row from 'react-storefront/Row'
 import CmsSlot from 'react-storefront/CmsSlot'
 import { withStyles } from '@material-ui/core'
 import InstagramFeed from './InstagramFeed'
+import Lazy from 'react-storefront/Lazy'
 
 @withStyles(theme => ({
   cmsSlot: {
@@ -40,7 +41,9 @@ export default class Home extends Component {
           </Typography>
         </Row>
         <Row>
-          <InstagramFeed />
+          <Lazy style={{ minHeight: 600 }}>
+            <InstagramFeed />
+          </Lazy>
         </Row>
       </Container>
     )
